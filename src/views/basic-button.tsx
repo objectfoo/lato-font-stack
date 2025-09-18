@@ -2,10 +2,10 @@ import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import { SampleContainer, type SampleContainerProps } from "./sample-container";
 
-export function BasicButton(props: SampleContainerProps): React.ReactNode {
+export function BasicButton(props: Omit<SampleContainerProps, "children">): React.ReactNode {
 	return (
 		<SampleContainer dir={props.dir} lang={props.lang}>
-			<Stack spacing={2} direction="row">
+			<Stack spacing={2} direction="row" useFlexGap>
 				<Button variant="text">Text</Button>
 				<Button variant="contained">Contained</Button>
 				<Button variant="outlined">Outlined</Button>

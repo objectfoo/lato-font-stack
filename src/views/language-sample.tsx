@@ -3,6 +3,7 @@ import Divider from "@mui/material/Divider";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { useSamplesContext } from "../samples-view";
+import { BasicButton } from "./basic-button";
 
 const headlines: ("h1" | "h3")[] = ["h1", "h3"];
 const variants: ("body1" | "caption")[] = ["body1"];
@@ -50,6 +51,8 @@ export function LanguageSample(props: {
 						props.lines.map((l) => <Typography variant={v} key={`${v}-${l}`}>{l}</Typography>))
 					)}
 				</Stack>
+				<Divider flexItem />
+				<BasicButton dir={props.dir ?? "ltr"} lang={props.lang} />
 				<Divider flexItem />
 			</Stack>
 		</Box>
