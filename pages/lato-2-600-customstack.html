@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>lato 2 + 600 + custom stack</title>
+	<style>
+		/* Light 300 */
+		@font-face {
+			font-family: "Lato";
+			src: url("/lato2/latin/fonts/LatoLatin-Light.woff2") format("woff2"),
+				url("/lato2/latin/fonts/LatoLatin-Light.woff") format("woff"),
+				url("/lato2/latin/fonts/LatoLatin-Light.ttf") format("truetype");
+			font-style: normal;
+			font-weight: 300;
+			font-display: swap;
+		}
+
+		/* Regular 400 */
+		@font-face {
+			font-family: "Lato";
+			src: url("/lato2/latin/fonts/LatoLatin-Regular.woff2") format("woff2"),
+				url("/lato2/latin/fonts/LatoLatin-Regular.woff") format("woff"),
+				url("/lato2/latin/fonts/LatoLatin-Regular.ttf") format("truetype");
+			font-style: normal;
+			font-weight: 400;
+			font-display: swap;
+		}
+
+		/* Semibold 600 */
+		@font-face {
+			font-family: "Lato";
+			src: url("/lato2/latin/fonts/LatoLatin-Semibold.woff2") format("woff2"),
+				url("/lato2/latin/fonts/LatoLatin-Semibold.woff") format("woff"),
+				url("/lato2/latin/fonts/LatoLatin-Semibold.ttf") format("truetype");
+			font-style: normal;
+			font-weight: 600;
+			font-display: swap;
+		}
+
+		/* Bold 700 */
+		@font-face {
+			font-family: "Lato";
+			src: url("/lato2/latin/fonts/LatoLatin-Bold.woff2") format("woff2"),
+				url("/lato2/latin/fonts/LatoLatin-Bold.woff") format("woff"),
+				url("/lato2/latin/fonts/LatoLatin-Bold.ttf") format("truetype");
+			font-style: normal;
+			font-weight: 700;
+			font-display: swap;
+		}
+
+		/* Black 900 */
+		@font-face {
+			font-family: "Lato";
+			src: url("/lato2/latin/fonts/LatoLatin-Black.woff2") format("woff2"),
+				url("/lato2/latin/fonts/LatoLatin-Black.woff") format("woff"),
+				url("/lato2/latin/fonts/LatoLatin-Black.ttf") format("truetype");
+			font-style: normal;
+			font-weight: 900;
+			font-display: swap;
+		}
+
+
+		:root {
+			font-family: Lato, system-ui, 'Segoe UI', 'Helvetica Neue', sans-serif;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="root"></div>
+	<script>window.page = "lato-2-600-customstack";</script>
+	<script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>

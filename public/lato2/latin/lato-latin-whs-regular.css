@@ -1,0 +1,54 @@
+/* Light 300 */
+@font-face {
+	font-family: "Lato";
+	src: url("/lato-latin-v2/fonts/LatoLatin-Light.woff2") format("woff2"),
+		url("/lato-latin-v2/fonts/LatoLatin-Light.woff") format("woff"),
+		url("/lato-latin-v2/fonts/LatoLatin-Light.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+}
+
+/* Regular 400 */
+@font-face {
+	font-family: "Lato";
+	src: url("/lato-latin-v2/fonts/LatoLatin-Regular.woff2") format("woff2"),
+		url("/lato-latin-v2/fonts/LatoLatin-Regular.woff") format("woff"),
+		url("/lato-latin-v2/fonts/LatoLatin-Regular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}
+
+/* Semibold 600 */
+@font-face {
+	font-family: "Lato";
+	src: url("/lato-latin-v2/fonts/LatoLatin-Semibold.woff2") format("woff2"),
+		url("/lato-latin-v2/fonts/LatoLatin-Semibold.woff") format("woff"),
+		url("/lato-latin-v2/fonts/LatoLatin-Semibold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+}
+
+/* Bold 700 */
+@font-face {
+	font-family: "Lato";
+	src: url("/lato-latin-v2/fonts/LatoLatin-Bold.woff2") format("woff2"),
+		url("/lato-latin-v2/fonts/LatoLatin-Bold.woff") format("woff"),
+		url("/lato-latin-v2/fonts/LatoLatin-Bold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+}
+
+/* Black 900 */
+@font-face {
+	font-family: "Lato";
+	src: url("/lato-latin-v2/fonts/LatoLatin-Black.woff2") format("woff2"),
+		url("/lato-latin-v2/fonts/LatoLatin-Black.woff") format("woff"),
+		url("/lato-latin-v2/fonts/LatoLatin-Black.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 900;
+	font-display: swap;
+}

@@ -1,0 +1,179 @@
+/* Webfont: LatoLatin-Black */
+@font-face {
+	font-family: "LatoLatinWebBlack";
+	src: url("fonts/LatoLatin-Black.woff2") format("woff2"),
+		url("fonts/LatoLatin-Black.woff") format("woff"),
+		url("fonts/LatoLatin-Black.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+/* Webfont: LatoLatin-BlackItalic */
+@font-face {
+	font-family: "LatoLatinWebBlack";
+	src: url("fonts/LatoLatin-BlackItalic.woff2") format("woff2"),
+		url("fonts/LatoLatin-BlackItalic.woff") format("woff"),
+		url("fonts/LatoLatin-BlackItalic.ttf") format("truetype");
+	font-style: italic;
+	font-weight: normal;
+}
+
+/* Webfont: LatoLatin-Bold */
+@font-face {
+	font-family: "LatoLatinWeb";
+	src: url("fonts/LatoLatin-Bold.woff2") format("woff2"),
+		url("fonts/LatoLatin-Bold.woff") format("woff"),
+		url("fonts/LatoLatin-Bold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: bold;
+}
+
+/* Webfont: LatoLatin-BoldItalic */
+@font-face {
+	font-family: "LatoLatinWeb";
+	src: url("fonts/LatoLatin-BoldItalic.woff2") format("woff2"),
+		url("fonts/LatoLatin-BoldItalic.woff") format("woff"),
+		url("fonts/LatoLatin-BoldItalic.ttf") format("truetype");
+	font-style: italic;
+	font-weight: bold;
+}
+
+/* Webfont: LatoLatin-Hairline */
+@font-face {
+	font-family: "LatoLatinWebHairline";
+	src: url("fonts/LatoLatin-Hairline.woff2") format("woff2"),
+		url("fonts/LatoLatin-Hairline.woff") format("woff"),
+		url("fonts/LatoLatin-Hairline.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+/* Webfont: LatoLatin-HairlineItalic */
+@font-face {
+	font-family: "LatoLatinWebHairline";
+	src: url("fonts/LatoLatin-HairlineItalic.woff2") format("woff2"),
+		url("fonts/LatoLatin-HairlineItalic.woff") format("woff"),
+		url("fonts/LatoLatin-HairlineItalic.ttf") format("truetype");
+	font-style: italic;
+	font-weight: normal;
+}
+
+/* Webfont: LatoLatin-Heavy */
+@font-face {
+	font-family: "LatoLatinWebHeavy";
+	src: url("fonts/LatoLatin-Heavy.woff2") format("woff2"),
+		url("fonts/LatoLatin-Heavy.woff") format("woff"),
+		url("fonts/LatoLatin-Heavy.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+/* Webfont: LatoLatin-HeavyItalic */
+@font-face {
+	font-family: "LatoLatinWebHeavy";
+	src: url("fonts/LatoLatin-HeavyItalic.woff2") format("woff2"),
+		url("fonts/LatoLatin-HeavyItalic.woff") format("woff"),
+		url("fonts/LatoLatin-HeavyItalic.ttf") format("truetype");
+	font-style: italic;
+	font-weight: normal;
+}
+
+/* Webfont: LatoLatin-Italic */
+@font-face {
+	font-family: "LatoLatinWeb";
+	src: url("fonts/LatoLatin-Italic.woff2") format("woff2"),
+		url("fonts/LatoLatin-Italic.woff") format("woff"),
+		url("fonts/LatoLatin-Italic.ttf") format("truetype");
+	font-style: italic;
+	font-weight: normal;
+}
+
+/* Webfont: LatoLatin-Light */
+@font-face {
+	font-family: "LatoLatinWebLight";
+	src: url("fonts/LatoLatin-Light.woff2") format("woff2"),
+		url("fonts/LatoLatin-Light.woff") format("woff"),
+		url("fonts/LatoLatin-Light.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+/* Webfont: LatoLatin-LightItalic */
+@font-face {
+	font-family: "LatoLatinWebLight";
+	src: url("fonts/LatoLatin-LightItalic.woff2") format("woff2"),
+		url("fonts/LatoLatin-LightItalic.woff") format("woff"),
+		url("fonts/LatoLatin-LightItalic.ttf") format("truetype");
+	font-style: italic;
+	font-weight: normal;
+}
+
+/* Webfont: LatoLatin-Medium */
+@font-face {
+	font-family: "LatoLatinWebMedium";
+	src: url("fonts/LatoLatin-Medium.woff2") format("woff2"),
+		url("fonts/LatoLatin-Medium.woff") format("woff"),
+		url("fonts/LatoLatin-Medium.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+/* Webfont: LatoLatin-MediumItalic */
+@font-face {
+	font-family: "LatoLatinWebMedium";
+	src: url("fonts/LatoLatin-MediumItalic.woff2") format("woff2"),
+		url("fonts/LatoLatin-MediumItalic.woff") format("woff"),
+		url("fonts/LatoLatin-MediumItalic.ttf") format("truetype");
+	font-style: italic;
+	font-weight: normal;
+}
+
+/* Webfont: LatoLatin-Regular */
+@font-face {
+	font-family: "LatoLatinWeb";
+	src: url("fonts/LatoLatin-Regular.woff2") format("woff2"),
+		url("fonts/LatoLatin-Regular.woff") format("woff"),
+		url("fonts/LatoLatin-Regular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+/* Webfont: LatoLatin-Semibold */
+@font-face {
+	font-family: "LatoLatinWebSemibold";
+	src: url("fonts/LatoLatin-Semibold.woff2") format("woff2"),
+		url("fonts/LatoLatin-Semibold.woff") format("woff"),
+		url("fonts/LatoLatin-Semibold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+/* Webfont: LatoLatin-SemiboldItalic */
+@font-face {
+	font-family: "LatoLatinWebSemibold";
+	src: url("fonts/LatoLatin-SemiboldItalic.woff2") format("woff2"),
+		url("fonts/LatoLatin-SemiboldItalic.woff") format("woff"),
+		url("fonts/LatoLatin-SemiboldItalic.ttf") format("truetype");
+	font-style: italic;
+	font-weight: normal;
+}
+
+/* Webfont: LatoLatin-Thin */
+@font-face {
+	font-family: "LatoLatinWebThin";
+	src: url("fonts/LatoLatin-Thin.woff2") format("woff2"),
+		url("fonts/LatoLatin-Thin.woff") format("woff"),
+		url("fonts/LatoLatin-Thin.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+/* Webfont: LatoLatin-ThinItalic */
+@font-face {
+	font-family: "LatoLatinWebThin";
+	src: url("fonts/LatoLatin-ThinItalic.woff2") format("woff2"),
+		url("fonts/LatoLatin-ThinItalic.woff") format("woff"),
+		url("fonts/LatoLatin-ThinItalic.ttf") format("truetype");
+	font-style: italic;
+	font-weight: normal;
+}
