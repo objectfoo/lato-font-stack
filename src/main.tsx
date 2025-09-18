@@ -4,7 +4,7 @@ import './index.css'
 import { App } from "./app";
 
 
-export type PageIds = "current" | "lato-2-600-customstack" | "lato-adobe" | "lato-adobe-customstack" | "lato-adobe-600" | "lato-adobe-600-customstack";
+export type PageIds = "current" | "next" | "lato-2-600-customstack" | "lato-adobe" | "lato-adobe-customstack" | "lato-adobe-600" | "lato-adobe-600-customstack";
 
 declare global {
 	interface Window {

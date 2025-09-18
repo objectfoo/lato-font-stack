@@ -2,8 +2,8 @@ import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import { useSamplesContext } from "../samples-view";
-import { BasicButton } from "./basic-button";
+import { LanguageOrb } from "./language-orb";
+import { SampleContainer } from "./sample-container";
 
 const headlines: ("h1" | "h3")[] = ["h1", "h3"];
 const variants: ("body1" | "caption")[] = ["body1"];
@@ -14,35 +14,10 @@ export function LanguageSample(props: {
 	dir?: "ltr" | "rtl";
 	lang: string;
 }): React.ReactNode {
-	const ctx = useSamplesContext();
-
 	return (
-		<Box lang={props.lang} dir={props.dir}>
+		<SampleContainer dir={props.dir ?? "ltr"} lang={props.lang}>
 			<Box sx={{ display: "flex", justifyContent: "flex-end" }}>
-				<Typography
-					onClick={() => { ctx.setLang(props.lang as typeof ctx.lang); }}
-					variant="body2"
-					sx={(theme) =>({
-						minWidth: 32,
-						height: 44,
-						px: 1,
-						py: .25,
-						color: "#000",
-						fontWeight: 900,
-						display: "flex",
-						letterSpacing: "1px",
-						borderRadius: "30px",
-						alignItems: "center",
-						justifyContent: "center",
-						textTransform: "uppercase",
-						backgroundColor: "#bbb",
-						"&:hover": {
-							cursor: "pointer",
-							backgroundColor: "#333",
-							color: "#fff",
-							boxShadow: theme.shadows[2],
-						},
-					})}>{props.lang}</Typography>
+				<LanguageOrb lang={props.lang} />
 			</Box>
 			<Stack direction="column" gap={2}>
 				<Stack direction="column" gap={2}>
@@ -52,9 +27,7 @@ export function LanguageSample(props: {
 					)}
 				</Stack>
 				<Divider flexItem />
-				<BasicButton dir={props.dir ?? "ltr"} lang={props.lang} />
-				<Divider flexItem />
 			</Stack>
-		</Box>
+		</SampleContainer>
 	);
 }
