@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-	base: "/font-stack",
+	base: "/lato-font-stack",
 	plugins: [react()],
 	build: {
 		rollupOptions: {

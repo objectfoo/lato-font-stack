@@ -100,7 +100,7 @@ function SamplesBar(props: {
 	return (
 		<AppBar position="static" elevation={0} sx={{ mb: 4 }} color="default">
 			<Toolbar variant="dense">
-				<IconButton href="/font-stack/" edge="start" sx={{ mr: 1 }}>{HomeIcon}</IconButton>
+				<IconButton href="/lato-font-stack/" edge="start" sx={{ mr: 1 }}>{HomeIcon}</IconButton>
 				<Typography sx={{ flexGrow: 1, fontWeight: 300, fontSize: 16 }}>{GetTitle()}</Typography>
 				<TextField
 					sx={{ minWidth: 90, fontSize: 14 }}
