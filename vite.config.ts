@@ -15,6 +15,7 @@ export default defineConfig({
 				"lato-adobe-600": "pages/lato-adobe-600.html",
 				"lato-adobe-customstack": "pages/lato-adobe-customstack.html",
 				"lato-adobe": "pages/lato-adobe.html",
+				"next": "pages/next.html",
 			}
 		}
 	}
