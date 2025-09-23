@@ -1,13 +1,29 @@
 import { ThemeProvider } from "@mui/material/styles";
-import { type PageIds } from "./main";
-import { CreateWhsTheme } from "./create-custom-theme";
-import { SamplesView } from "./views/samples-view";
+import { type TRoute } from "./main";
+import { CreateWhsTheme, type CreateThemeOptions } from "./create-custom-theme";
+import { SamplesView } from "./samples/samples-view";
 
 
 
-export function App(props: { page: PageIds }): React.ReactNode {
-	let family: "STD"|"ALTERNATE";
-	switch (props.page) {
+export function App(props: { page: TRoute; }): React.ReactNode {
+	return (
+		<ThemeProvider theme={CreateAppTheme(props.page)}>
+			<GetViewForPage {...{ page: props.page }} />
+		</ThemeProvider>
+	);
+}
+
+function GetViewForPage(props: { page: TRoute; }): React.ReactNode {
+	return props.page === "compare"
+		? <>Compare</>
+		: <SamplesView />
+}
+
+const CreateAppTheme = (page: TRoute) => {
+	let family: CreateThemeOptions["fontFamily"];
+
+	switch (page) {
+		case "compare":
 		case "next":
 		case "lato-adobe-600-customstack":
 		case "lato-2-600-customstack":
@@ -19,10 +35,6 @@ export function App(props: { page: PageIds }): React.ReactNode {
 		default:
 			family = "STD";
 	}
-	const theme = CreateWhsTheme({ fontFamily: family });
-	return (
-		<ThemeProvider theme={theme}>
-			<SamplesView />
-		</ThemeProvider>
-	);
-}
+
+	return CreateWhsTheme({ fontFamily: family });
+};
