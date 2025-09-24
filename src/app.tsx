@@ -2,7 +2,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import { type TRoute } from "./main";
 import { CreateWhsTheme, type CreateThemeOptions } from "./create-custom-theme";
 import { SamplesView } from "./samples/samples-view";
-
+import { Compare } from "./compare/compare";
 
 
 export function App(props: { page: TRoute; }): React.ReactNode {
@@ -15,7 +15,7 @@ export function App(props: { page: TRoute; }): React.ReactNode {
 
 function GetViewForPage(props: { page: TRoute; }): React.ReactNode {
 	return props.page === "compare"
-		? <>Compare</>
+		? <Compare />
 		: <SamplesView />
 }
 
