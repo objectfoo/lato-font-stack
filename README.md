@@ -4,9 +4,11 @@ Determine a good font stack and efficient font-faces for supported languages.
 
 In general we want to use lato for those languages it supports well, and fallback to an appropriate font if lato doesn't support a script.
 
-Currently our font stack is `Lato, Helvetica Neue, Arial, sans-serif`.
+Currently our font stack is `Lato, Arial, Helvetica Neue, sans-serif`.
 
-For scripts that are not supported by lato, [lato font support](https://www.latofonts.com/) we will want a good set of fallbacks. A new, well supported general fallback [system-ui](https://caniuse.com/?search=system-ui) seems to work pretty well and should have good language support because it's the system's ui font.
+Arial is much bolder than Lato 300, our title font face, so sometimes in other languages a really bold character will jump out and slap you in the face.
+
+For scripts that are not supported by lato,  we will want a good set of fallbacks. A new, well supported general fallback [system-ui](https://caniuse.com/?search=system-ui) seems to work pretty well and should have good language support because it's the system's ui font.
 
 **So**
 
@@ -22,10 +24,12 @@ All the language font faces can be defined at the same place without any perform
 
 **Also**
 
-We haven't been serving lato for languages other than latin for awhile, I think I'll let them continue to fallback but now they will have a better fallback font defined (hopefully)
+We have been serving lato-latin for languages other than latin for awhile, maybe continue to let it fallback?
 
 
 ## Languages
+
+ref [Languages to Scripts table](https://www.unicode.org/cldr/charts/47/supplemental/languages_and_scripts.html)
 
 | Name                  | code  | script            |
 | --------------------- | ----- | ----------------- |
@@ -55,7 +59,7 @@ We haven't been serving lato for languages other than latin for awhile, I think 
 
 ## Unicode ranges by script
 
-From [google fonts](https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600;700;900&display=swap).
+ref [google fonts](https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;600;700;900&display=swap).
 
 ```css
 /* latin-ext */
@@ -94,27 +98,21 @@ font squirrel format
 ```sh
 # latin 
 0000-00FF,0131,0152-0153,02BB-02BC,02C6,02DA,02DC,0304,0308,0329,2000-206F,20AC,2122,2191,2193+2212,2215,FEFF,FFFD
-
 # latin-ext
 0100-02BA,02BD-02C5,02C7-02CC,02CE-02D7,02DD-02FF,0304,0308,0329,1D00-1DBF,1E00-1E9F,1EF2-1EFF,2020,20A0-20AB,20AD-20C0,2113,2C60-2C7F,A720-A7FF
 
 # Not in test
 # cyrillic
 0301,0400-045F,0490-0491,04B0-04B1,2116
-
 # cyrillic-ext
 0460-052F,1C80-1C8A,20B4,2DE0-2DFF,A640-A69F,FE2E-FE2F
-
 # greek
 0370-0377,037A-037F,0384-038A,038C,038E-03A1,03A3-03FF
-
-greek-ext
+# greek-ext
 1F00-1FFF
-
-vietnamese
+# vietnamese
 0102-0103,0110-0111,0128-0129,0168-0169,01A0-01A1,01AF-01B0,0300-0301,0303-0304, 0308-0309,0323,0329,1EA0-1EF9,20AB
 ```
-
 
 ## Links
 
@@ -123,6 +121,3 @@ vietnamese
 * [Languages to Scripts table](https://www.unicode.org/cldr/charts/47/supplemental/languages_and_scripts.html)
 * [Lato Fonts](https://www.latofonts.com/)
 * https://tech.busuu.com/handling-css-font-stacks-for-multi-language-websites-cf852e321f06
-
-
-

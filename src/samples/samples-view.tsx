@@ -106,7 +106,7 @@ function GetTitle(): string {
 		case "current":
 			return "Google lato v13 standard font stack";
 		case "next":
-			return "Lato 2.0 custom font stack (no 600, no italic)";
+			return "Lato 2 subset, updated font stack";
 		case "stack-test":
 			return "Super stack test";
 		default:

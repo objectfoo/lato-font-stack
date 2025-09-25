@@ -7,7 +7,7 @@ import { StackTest } from "./stack-test/stack-test";
 export function App(props: { page: TRoute; }): React.ReactNode {
 	return (
 		<ThemeProvider theme={CreateAppTheme(props.page)}>
-			{props.page === "stack-test" ? <StackTest /> : <SamplesView />}
+			{(props.page === "stack-test" || props.page === "stack-test-v13") ? <StackTest /> : <SamplesView />}
 		</ThemeProvider>
 	);
 }
@@ -23,6 +23,7 @@ const CreateAppTheme = (page: TRoute) => {
 		case "lato-adobe-customstack":
 			family = "ALTERNATE";
 			break;
+		case "stack-test-v13":
 		case "lato-adobe-600":
 		case "lato-adobe":
 		default:
