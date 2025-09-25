@@ -1,18 +1,19 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
 import { App } from "./app";
+import { createRoot } from 'react-dom/client'
+import { StrictMode } from 'react'
 
-
-export type PageIds = "current" | "next" | "lato-2-600-customstack" | "lato-adobe" | "lato-adobe-customstack" | "lato-adobe-600" | "lato-adobe-600-customstack";
+export type TRoute = "current" | "lato-2-600-customstack" | "lato-adobe-600-customstack" |
+	"lato-adobe-600" | "lato-adobe-customstack" | "lato-adobe" | "next" | "stack-test" |
+	"stack-test-v13";
 
 declare global {
 	interface Window {
-		page: PageIds;
+		page: TRoute;
 	}
 }
+const root = createRoot(document.getElementById('root')!);
 
-createRoot(document.getElementById('root')!).render(
+root.render(
 	<StrictMode>
 		<App page={window.page} />
 	</StrictMode>,

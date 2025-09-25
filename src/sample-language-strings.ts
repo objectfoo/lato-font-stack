@@ -1,4 +1,4 @@
-import { type TLanguageSampleStrings } from "./views/samples-view";
+import { type TLanguageSampleStrings } from "./samples/samples-view";
 
 export const ar: TLanguageSampleStrings = {
 	headline: "ما هذا WebMD ONE?",

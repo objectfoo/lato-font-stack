@@ -1,7 +1,7 @@
 import { createTheme } from "@mui/material/styles";
 import type { Direction, PaletteOptions, ThemeOptions, TypographyVariantsOptions } from "@mui/material";
 
-type CreateThemeOptions = {
+export type CreateThemeOptions = {
 	mode?: PaletteOptions["mode"];
 	direction?: Direction;
 	tonalOffset?: PaletteOptions["tonalOffset"];
