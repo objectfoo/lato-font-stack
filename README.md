@@ -6,26 +6,23 @@ In general we want to use lato for those languages it supports well, and fallbac
 
 Currently our font stack is `Lato, Arial, Helvetica Neue, sans-serif`.
 
-Arial is much bolder than Lato 300, our title font face, so sometimes in other languages a really bold character will jump out and slap you in the face.
+Our titles use a light font weight, Arial is much bolder than Lato 300, so sometimes in other languages a really bold title character will reach out and slap you in the face.
 
-For scripts that are not supported by lato,  we will want a good set of fallbacks. A new, well supported general fallback [system-ui](https://caniuse.com/?search=system-ui) seems to work pretty well and should have good language support because it's the system's ui font.
+Additionally no matter the language most webpages include some latin characters so we want our latin character set to be similar to a systems fallback font.
+
+For scripts that are not supported by lato, we will want a good set of fallbacks. A new-ish, well supported general fallback [system-ui](https://caniuse.com/?search=system-ui) seems to work pretty well and should have good language support because it's the system's ui font, segoe and helvetica provided for safety.
 
 **So**
 
 New stack: `Lato, system-ui, 'Segoe UI', 'Helvetica Neue', sans-serif`.
 
-Next is organizing our font into bite sized chunks to avoid initial load performance issues, which could affect current SLAs.
-
-After much research I think we should take the *unicode ranges for latin and latin-ext* that google fonts uses when serving public fonts. These font sets are optimized for web use and latin + latin-extended will serve most of our clients.
-
-The unicode ranges define the exact characters needed for a particular language, and are setup to be additive. This means that an English language user will download the latin font, and a French user will download the latin font + latin-ext for any extra bits needed for french.
-
-All the language font faces can be defined at the same place without any performance concerns, if the browser doesn't need to download a font face it won't. This means nothing special needs to be done for translation purposes.
-
 **Also**
 
-We have been serving lato-latin for languages other than latin for awhile, maybe continue to let it fallback?
+We have been serving an "old" version of lato for awhile, we should probably update it to the "newest 1.0" version of lato that google is currently serving to get a few more characters.
 
+*Lato 2.0* Looks different than the 1.0 version of lato we have been using. Also it has rendering issues on windows that move the characters up, due to anti-aliasing, works fine on Mac (safari/chrome - not firefox). This is especially problematic on contained or outlined buttons where the label is noticeably too high in the button on windows. - So it's out. 
+
+Google's lato 1 v24 has some compatibility fixes that can't hurt to update, that plus the new font stack should give us good language support without being too jarring visually.
 
 ## Languages
 
