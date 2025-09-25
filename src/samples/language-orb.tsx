@@ -8,7 +8,7 @@ export function LanguageOrb(props: { lang: string; }): React.ReactNode {
 			onClick={() => { ctx.setLang(props.lang as typeof ctx.lang); }}
 			variant="body2"
 			sx={(theme) => ({
-				minWidth: 32,
+				minWidth: 44,
 				height: 44,
 				px: 1,
 				py: .25,

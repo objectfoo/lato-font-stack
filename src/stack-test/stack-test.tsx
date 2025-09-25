@@ -23,7 +23,7 @@ const commonLatin = [
 ];
 
 const samples = [
-	{ key: "arab", chars: CharacterSamples.commonArabic },
+	{ key: "arabic", chars: CharacterSamples.commonArabic },
 	{ key: "chinese (zh)", chars: CharacterSamples.commonChineseZh },
 	{ key: "cyrillic", chars: CharacterSamples.commonCyrillic },
 	{ key: "hebrew", chars: CharacterSamples.commonHebrew },
@@ -55,10 +55,13 @@ export function StackTest(): React.ReactNode {
 				flexDirection: { xs: "column", sm: "row" },
 				alignItems: { xs: "stretch", sm: "center" },
 				borderBottom: "1px solid #ccc",
-				mb: 2,
 				p: .5,
+				minHeight: 44,
+				justifyContent: "center",
 			}}>
-				<Typography variant="body2" component="h1" sx={{ flexGrow: 1, flexShrink: 0 }}>Font Stack Test</Typography>
+				<Typography variant="body2" component="h1" sx={{ flexGrow: 1, flexShrink: 0, fontFamily: "monospace" }}>
+					"Font Stack Test"
+				</Typography>
 				<Select
 					displayEmpty
 					id="font-size-select"
@@ -75,28 +78,32 @@ export function StackTest(): React.ReactNode {
 				<Button variant="outlined" size="small" disabled={selected === "latin"} onClick={() => { setSelected("latin") }}>Reset</Button>
 				<Button variant="outlined" size="small" disabled={selected === undefined} onClick={() => { setSelected(undefined) }}>All</Button>
 			</Stack>
-			{filtered.map(({ key, chars }) => <CharacterGrid chars={chars} key={key} label={key} variant={variant} />)}
+			<div>
+				{filtered.map(({ key, chars }) => <CharacterGrid chars={chars} key={key} label={key} variant={variant} />)}
+			</div>
 		</Box>
 	);
 }
 
-const IsLikelyLato = (c: string): boolean => {
-	return commonLatin.includes(c);
-}
-
-const gridSizeForVariant = (v: TypographyProps["variant"]): number => {
-	if (v === undefined) return 48;
-	if (["h1", "h2", "h3"].includes(v)) return 52;
-	return 48;
-}
-
-
 function CharacterGrid(props: { chars: string[]; label: string; variant: TypographyProps["variant"]; }): React.ReactNode {
-	const gridSize = gridSizeForVariant(props.variant)
+	const gridSize = 53;
 
 	return (
 		<>
-			<Typography variant="h6" sx={{ px: 2 }} >{props.label}</Typography>
+			<Typography variant="h6" component="h2" sx={{
+				mb: 1,
+				fontFamily: "monospace",
+				textTransform: "capitalize",
+				textAlign: "center",
+				position: "sticky",
+				top: 0,
+				backgroundColor: "#fff",
+				zIndex: 10,
+				borderBottom: "1px solid #ccc",
+				py: 1,
+			}}>
+				{props.label}
+			</Typography>
 			<Box sx={{ display: "flex", flexWrap: "wrap", gap: .5, p: 1, justifyContent: "center" }}>
 				{props.chars.map((char) => (
 					<Box
@@ -112,12 +119,14 @@ function CharacterGrid(props: { chars: string[]; label: string; variant: Typogra
 							position: "relative",
 							cursor: "pointer",
 							backgroundColor: "#f0f0f0",
+							// background: "linear-gradient(to bottom, grey 50%, white 50%)",
 							"&:before": {
 								content: '""',
 								display: "block",
 								borderTop: "1px solid #ddd",
 								width: "100%",
 								position: "absolute",
+								transform: "translateY(1px)",
 							},
 							"&:after": {
 								content: '""',
@@ -127,27 +136,9 @@ function CharacterGrid(props: { chars: string[]; label: string; variant: Typogra
 								top: 0,
 								bottom: 0,
 							},
-							"& .latoCheck": {
-								fontSize: 8,
-								color: "#777",
-								position: "absolute",
-								top: 0,
-								left: 2,
-							}
 						}}
 					>
-						{/* <svg
-							width={gridSize}
-							height={gridSize}
-							viewBox="0 0 48 48"
-							style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, pointerEvents: "none" }}
-						>
-							<line shape-rendering="crispEdges" x1="24" y1="0" x2="24" y2="48" stroke="#ddd" strokeWidth="hairline" />
-							<line x1="0" y1="24" x2="48" y2="24" stroke="#ddd" strokeWidth="1" />
-						</svg> */}
-
 						<Typography component="div" variant={props.variant} style={{ display: "inline-block", position: "relative", zIndex: 1 }}>{char}</Typography>
-						<Typography variant="caption" className="latoCheck">{IsLikelyLato(char) ? "✓" : "✕"}</Typography>
 					</Box>
 				))}
 			</Box>

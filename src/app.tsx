@@ -1,3 +1,4 @@
+import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
 import { type TRoute } from "./main";
 import { CreateWhsTheme, type CreateThemeOptions } from "./create-custom-theme";
@@ -7,6 +8,7 @@ import { StackTest } from "./stack-test/stack-test";
 export function App(props: { page: TRoute; }): React.ReactNode {
 	return (
 		<ThemeProvider theme={CreateAppTheme(props.page)}>
+			<CssBaseline />
 			{(props.page === "stack-test" || props.page === "stack-test-v13") ? <StackTest /> : <SamplesView />}
 		</ThemeProvider>
 	);

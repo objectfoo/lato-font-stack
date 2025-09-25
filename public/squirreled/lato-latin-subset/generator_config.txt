@@ -2,4 +2,28 @@
 # Upload this file to the generator to recreate the settings
 # you used to create these fonts.
 
-{"mode":"expert","formats":["woff","woff2"],"tt_instructor":"keep","fix_gasp":"xy","fix_vertical_metrics":"Y","metrics_ascent":"","metrics_descent":"","metrics_linegap":"","add_spaces":"Y","add_hyphens":"Y","fallback":"none","fallback_custom":"100","options_subset":"advanced","subset_custom":"","subset_custom_range":"0000-00FF,0131,0152-0153,02BB-02BC,02C6,02DA,02DC,0304,0308,0329,2000-206F,20AC,2122,2191,2193+2212,2215,FEFF,FFFD","subset_ot_features_list":"","css_stylesheet":"stylesheet.css","filename_suffix":"-webfont","spacing_adjustment":"0","rememberme":"Y"}
+{
+	"mode": "expert",
+	"formats": [
+		"woff",
+		"woff2"
+	],
+	"tt_instructor": "keep",
+	"fix_gasp": "xy",
+	"fix_vertical_metrics": "Y",
+	"metrics_ascent": "",
+	"metrics_descent": "",
+	"metrics_linegap": "",
+	"add_spaces": "Y",
+	"add_hyphens": "Y",
+	"fallback": "none",
+	"fallback_custom": "100",
+	"options_subset": "advanced",
+	"subset_custom": "",
+	"subset_custom_range": "0000-00FF,0131,0152-0153,02BB-02BC,02C6,02DA,02DC,0304,0308,0329,2000-206F,20AC,2122,2191,2193+2212,2215,FEFF,FFFD",
+	"subset_ot_features_list": "",
+	"css_stylesheet": "stylesheet.css",
+	"filename_suffix": "-webfont",
+	"spacing_adjustment": "0",
+	"rememberme": "Y"
+}

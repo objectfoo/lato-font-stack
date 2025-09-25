@@ -9,6 +9,10 @@ export default defineConfig({
 		rollupOptions: {
 			input: {
 				main: "index.html",
+				"stack-test-experiment4": "pages/stack-test-exp4.html",
+				"stack-test-experiment3": "pages/stack-test-exp3.html",
+				"stack-test-experiment2": "pages/stack-test-exp2.html",
+				"stack-test-experiment1": "pages/stack-test-exp1.html",
 				"stack-test-v13": "pages/stack-test-v13.html",
 				"stack-test": "pages/stack-test.html",
 				"current": "pages/current.html",
