@@ -107,6 +107,8 @@ function GetTitle(): string {
 			return "Google lato v13 standard font stack";
 		case "next":
 			return "Lato 2.0 custom font stack (no 600, no italic)";
+		case "stack-test":
+			return "Super stack test";
 		default:
 			throw new Error(`Unknown page type ${page}`);
 	}

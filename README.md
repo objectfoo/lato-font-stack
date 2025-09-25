@@ -6,13 +6,23 @@ In general we want to use lato for those languages it supports well, and fallbac
 
 Currently our font stack is `Lato, Helvetica Neue, Arial, sans-serif`.
 
-For scripts that are not supported by lato, [lato font support](https://www.latofonts.com/) we will want to a good set of fallbacks. A well supported general fallback is `system-ui` seems to work and by default is something that the browsers system supports because it's their system ui font. Full stack: `Lato, system-ui, 'Segoe UI', 'Helvetica Neue', sans-serif`.
+For scripts that are not supported by lato, [lato font support](https://www.latofonts.com/) we will want a good set of fallbacks. A new, well supported general fallback [system-ui](https://caniuse.com/?search=system-ui) seems to work pretty well and should have good language support because it's the system's ui font.
+
+**So**
+
+New stack: `Lato, system-ui, 'Segoe UI', 'Helvetica Neue', sans-serif`.
 
 Next is organizing our font into bite sized chunks to avoid initial load performance issues, which could affect current SLAs.
 
-After much research I think we should take the *unicode ranges by script* that google fonts uses when serving public fonts, they are optimized for web use. These ranges define the exact characters needed for a particular language, most of which include most of the latin characters. This allows a page to download only they fonts needed on demand.
+After much research I think we should take the *unicode ranges for latin and latin-ext* that google fonts uses when serving public fonts. These font sets are optimized for web use and latin + latin-extended will serve most of our clients.
 
-All the language font faces can be defined at the same place. If the browser doesn't need to download a font face it won't. This means nothing special needs to be done for translation purposes.
+The unicode ranges define the exact characters needed for a particular language, and are setup to be additive. This means that an English language user will download the latin font, and a French user will download the latin font + latin-ext for any extra bits needed for french.
+
+All the language font faces can be defined at the same place without any performance concerns, if the browser doesn't need to download a font face it won't. This means nothing special needs to be done for translation purposes.
+
+**Also**
+
+We haven't been serving lato for languages other than latin for awhile, I think I'll let them continue to fallback but now they will have a better fallback font defined (hopefully)
 
 
 ## Languages
@@ -78,6 +88,33 @@ From [google fonts](https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;
   unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
 }
 ```
+
+font squirrel format
+
+```sh
+# latin 
+0000-00FF,0131,0152-0153,02BB-02BC,02C6,02DA,02DC,0304,0308,0329,2000-206F,20AC,2122,2191,2193+2212,2215,FEFF,FFFD
+
+# latin-ext
+0100-02BA,02BD-02C5,02C7-02CC,02CE-02D7,02DD-02FF,0304,0308,0329,1D00-1DBF,1E00-1E9F,1EF2-1EFF,2020,20A0-20AB,20AD-20C0,2113,2C60-2C7F,A720-A7FF
+
+# Not in test
+# cyrillic
+0301,0400-045F,0490-0491,04B0-04B1,2116
+
+# cyrillic-ext
+0460-052F,1C80-1C8A,20B4,2DE0-2DFF,A640-A69F,FE2E-FE2F
+
+# greek
+0370-0377,037A-037F,0384-038A,038C,038E-03A1,03A3-03FF
+
+greek-ext
+1F00-1FFF
+
+vietnamese
+0102-0103,0110-0111,0128-0129,0168-0169,01A0-01A1,01AF-01B0,0300-0301,0303-0304, 0308-0309,0323,0329,1EA0-1EF9,20AB
+```
+
 
 ## Links
 

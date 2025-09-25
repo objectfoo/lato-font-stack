@@ -9,6 +9,7 @@ export default defineConfig({
 		rollupOptions: {
 			input: {
 				main: "index.html",
+				"stack-test": "pages/stack-test.html",
 				"current": "pages/current.html",
 				"lato-2-600-customstack": "pages/lato-2-600-customstack.html",
 				"lato-adobe-600-customstack": "pages/lato-adobe-600-customstack.html",
