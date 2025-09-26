@@ -28,6 +28,7 @@ Google's lato 1 v24 has some compatibility fixes that can't hurt to update, that
 
 A better fallback than `system-ui` \ `Segoe UI`? maybe `Segoe UI Variable Display` or `Calibri` the lowercase `g` matches better, lc `a` also matches-ish.
 
+* [modern font stacks](https://github.com/system-fonts/modern-font-stacks?tab=readme-ov-file#system-ui) 
 * [windows fonts](https://learn.microsoft.com/en-us/typography/fonts/windows_10_font_list)
 * [segoe ui variable](https://learn.microsoft.com/en-us/windows/apps/design/signature-experiences/typography)
 * [calibri](https://learn.microsoft.com/en-us/typography/font-list/calibri)
