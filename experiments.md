@@ -6,7 +6,8 @@
 - Lato 2 Experiment 1
 - Lato 2 Experiment 2
 - Lato 2 Experiment 3
-- Google lato v24 Experiment 4
+- Google lato v24 Experiment 4 (new font stack)
+- Google lato v13 Experiment 5 (new font stack)
 
 ### Lato 2.0 system-ui stack
 
@@ -179,3 +180,41 @@ system-ui font stack
 	"rememberme": "Y"
 }
 ```
+
+### Google lato v13 Experiment 5
+
+Google lato 1 (v13)   
+system-ui font stack
+
+* unmodified
+
+**Looks good on Windows**
+
+```json
+{
+	"mode": "expert",
+	"formats": [
+		"woff",
+		"woff2"
+	],
+	"tt_instructor": "keep",
+	"fix_gasp": "xy",
+	"fix_vertical_metrics": "N",
+	"metrics_ascent": "",
+	"metrics_descent": "",
+	"metrics_linegap": "",
+	"add_spaces": "Y",
+	"add_hyphens": "Y",
+	"fallback": "none",
+	"fallback_custom": "100",
+	"options_subset": "none",
+	"subset_custom": "",
+	"subset_custom_range": "",
+	"subset_ot_features_list": "",
+	"css_stylesheet": "googlev24.css",
+	"filename_suffix": "-webfont",
+	"spacing_adjustment": "0",
+	"rememberme": "Y"
+}
+```
+

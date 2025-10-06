@@ -40,7 +40,7 @@ type TSampleId = (typeof samples)[number]["key"];
 
 export function StackTest(): React.ReactNode {
 	const [selected, setSelected] = useState<TSampleId | undefined>("latin");
-	const [variant, setVariant] = useState<TypographyProps["variant"]>("body1");
+	const [variant, setVariant] = useState<TypographyProps["variant"]>("h2");
 	const filtered = useMemo(() => selected === undefined ? samples : samples.filter(s => s.key === selected), [selected]);
 	const fontVariants: TypographyProps["variant"][] = [
 		"h1", "h2", "h3", "h4", "h5", "h6",
